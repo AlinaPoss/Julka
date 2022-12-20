@@ -1,0 +1,23 @@
+Prororo 30
+Arpon 3187
+Ghortom 2340 
+Sprom 450
+Atrium 1205
+using Test
+@testset "mod_test" begin
+    @test get([info("Strop", 1200), info("Art", 20), info("Krop", 4300), info("Astra", 30)]) == Any[info("Art", 20), info("Astra", 30)]
+end
+using Test
+@testset "mod_test" begin
+    a = get([info("Strop", 1200), info("Art", 20), info("Krop", 4300), info("Astra", 30)])
+    b = [info("Art", 20), info("Astra", 30)]
+    @test a == b
+end
+
+function eq(name, age, name_other, age_other)
+            if (name == name_other) && (age == age_other) 
+                return True
+            else 
+                return False
+            end
+        end 
